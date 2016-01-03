@@ -1,0 +1,128 @@
+// FAQFormatter Styles
+
+.faq--section-title {
+  text-transform: uppercase;
+  font-size: 1em;
+  border: 1px solid #3c6;
+  display: inline-block;
+  padding: 0.3em 0.7em;
+  border-radius: 3px;
+  background-color: #f6fff6;
+  color: #062;
+  font-weight: bold;
+}
+
+
+.faq--question {
+  font-size: 1.1em;
+  color: #c60;
+  cursor: pointer;
+  // margin: .4em 0;
+  margin: 0 0 0 1.8em;
+  padding: 4px 0;
+
+  & span.with-video {
+    &:before {
+      content: "video";
+      text-transform: uppercase;
+      font-size: 10px;
+      background-color: #fff;
+      color: #c60;
+      padding: 2px 4px;
+      font-weight: normal;
+      margin-left: 1em;
+      border: 1px solid #c60;
+      border-radius: 3px;
+    }
+
+  }
+
+  &:hover {
+    color: #b50;
+    background-color: lighten(#b50,60%)
+  }
+
+  &:before {
+    content: "Q: ";
+    font-size: 1.1em;
+    margin-left: -25px;
+    margin-top: -3px;
+  }
+}
+
+.faq--answer {
+  padding: 0 0 0 .3em;
+  margin: 0 0 0 1.8em;
+
+  &.hidden { display:none; }
+
+  & > p {
+    margin: 0 0 .7em 0;
+    font-size: 1.1em;
+    line-height: 1.35;
+  }
+
+
+  &:before {
+    content: "A:";
+
+    font-size: 1.15em;
+    margin-left: -25px;
+    font-weight: bold;
+    position: absolute;
+  }
+
+}
+
+.faq--section--title-link {
+  font-size: 1.3em;
+  font-weight: normal;
+  line-height: 1.4;
+  > a:hover {
+    color: #333;
+    background-color: #fff;
+  }
+  & > a {
+    color: #666;
+    text-decoration: none;
+  }
+}
+
+.faq--section--title-link:last-child {
+    margin-bottom: 2em;
+  }
+
+.faq--section--title-anchor {
+  color: #666;
+  font-size: 1.7em;
+  font-weight: normal;
+  margin-top: 1em;
+  margin-bottom: 0.3em;
+}
+
+
+.faq {
+
+  font-family: arial, helvetica, sans-serif;
+  font-size: 1rem;
+  color: #433;
+
+
+  code, pre {
+    background-color: #eee;
+    padding: 0px 4px;
+    outline: 1px solid #ddd;
+    font-size: .95em;
+
+    & > code {
+      outline: none;
+    }
+  }
+
+  ol, li {
+    & > p {
+          margin: 0;
+        }
+
+      }
+}
