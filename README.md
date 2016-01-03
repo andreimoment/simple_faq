@@ -1,8 +1,8 @@
-# FAQFormat
+# SimpleFAQ
 
-FAQs may contain multiple sections with groups of questions and answers, which may get hard to maintain in HTML format.
+FAQ documents often contain multiple sections with groups of questions and answers, which may get hard to maintain in HTML format.
 
-FAQFormat simplifies the creation of interactive FAQ documents using Markdown and a few special tags. The document
+SimpleFAQ makes it easy to create interactive FAQ documents using Markdown and a few special tags.
 
 ## Installation
 
@@ -37,7 +37,7 @@ If you are not using rails, copy the assets files manually.
 
 ## Usage
 
-~~~
+~~~ruby
 html_for_display = SimpleFAQ::Formatter.new(markdown_with_faq_tags).html
 ~~~
 
@@ -57,12 +57,11 @@ and may be displayed in sections:
 
     {section-title}Section 1{/section-title}
     {q}Question title{/q}
-    {a}Answer content{/a}
+    {a}Answer content, in Markdown{/a}
 
     {section-title}Section 2{/section-title}
     {q}Question title{/q}
     {a}Answer content{/a}
-
 
 ### Example:
 
@@ -108,12 +107,11 @@ In a Rails view:
     }
 
     formatted_faq_content = SimpleFAQ::Formatter.new(faq_content).html
-
     %>
 
     <%= formatted_faq_content.html_safe %>
 
- In a real applicatoin, you may want to have the faq content in a database and prepare the formatted_faq_content in the model.
+ In a real application, you may want to have the faq content in a database and prepare the formatted_faq_content in the model.
 
 ## Contributing
 
